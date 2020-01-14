@@ -1,0 +1,30 @@
+.plan_card {
+  background-color: #fe9292;
+  border-radius: 5px;
+  max-width: 300px;
+  padding: 10px 20px;
+  min-height: 200px;
+  text-align: center;
+  & * {
+    margin-bottom: 10%;
+  }
+  button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    &:first-of-type {
+      margin-right: 10px;
+    }
+    &:nth-of-type(2) {
+      background-color: #ff4d4d;
+      color: #fff;
+      &:hover {
+        background-color: #f7baca;
+        cursor: pointer;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
