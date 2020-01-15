@@ -1,0 +1,7 @@
+.plans {
+  margin: 1rem;
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+  }
+}
