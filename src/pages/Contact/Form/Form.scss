@@ -1,0 +1,21 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  & input {
+    margin-bottom: 20px;
+  }
+  & button {
+    margin-top: 20px;
+    max-width: 150px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff4d4d;
+    color: #fff;
+    &:hover {
+      background-color: #f7baca;
+      cursor: pointer;
+    }
+  }
+}
