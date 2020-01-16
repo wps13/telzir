@@ -1,0 +1,15 @@
+.navbar {
+  width: 50%;
+  max-width: 300px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    & li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}
