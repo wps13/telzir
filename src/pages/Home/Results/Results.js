@@ -37,5 +37,5 @@ ResultTable.propTypes = {
   costWithPlan: PropType.string.isRequired,
   costWithoutPlan: PropType.string.isRequired,
   planValue: PropType.number.isRequired,
-  setHasResults: PropType.func.isRequired
+  setHasResults: PropType.func
 };
