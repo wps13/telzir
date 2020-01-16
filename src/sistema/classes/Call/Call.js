@@ -2,11 +2,11 @@ const DISCOUNT_PLAN_PRICE = 0.1;
 
 class Call {
   constructor({ origin, destiny, duration, minutePrice = 0, plan = 0 }) {
-    this.origin = origin;
-    this.destiny = destiny;
-    this.duration = duration;
-    this.minutePrice = minutePrice;
-    this.plan = plan;
+    this.origin = parseInt(origin);
+    this.destiny = parseInt(destiny);
+    this.duration = parseInt(duration);
+    this.minutePrice = parseFloat(minutePrice);
+    this.plan = parseInt(plan);
   }
   getOrigin() {
     return this.origin;
