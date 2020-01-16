@@ -9,7 +9,8 @@ const Results = ({
   callDuration,
   costWithPlan,
   costWithoutPlan,
-  planValue
+  planValue,
+  setHasResults
 }) => {
   return (
     <div>
@@ -22,7 +23,7 @@ const Results = ({
         costWithoutPlan={costWithoutPlan}
         planValue={planValue}
       />
-      <button>Simular novamente</button>
+      <button onClick={() => setHasResults(false)}>Simular novamente</button>
     </div>
   );
 };
@@ -35,5 +36,6 @@ ResultTable.propTypes = {
   callDuration: PropType.number.isRequired,
   costWithPlan: PropType.string.isRequired,
   costWithoutPlan: PropType.string.isRequired,
-  planValue: PropType.number.isRequired
+  planValue: PropType.number.isRequired,
+  setHasResults: PropType.func.isRequired
 };
