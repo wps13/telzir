@@ -47,7 +47,8 @@ module.exports = {
     alias: {
       components: path.resolve(__dirname, "src/components/"),
       pages: path.resolve(__dirname, "src/pages/"),
-      config: path.resolve(__dirname, "src/config/")
+      config: path.resolve(__dirname, "src/config/"),
+      sistema: path.resolve(__dirname, "src/sistema/")
     }
   },
   plugins: [
