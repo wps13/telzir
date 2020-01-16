@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
+import PropTypes from "prop-types";
+
 import "./Simulation.scss";
 
 import InputNumber from "./InputNumber/InputNumber";
 import PhonePlans from "./PhonePlans/PhonePlans";
 import DDDS from "./DDDS/DDDS";
 
-const Simulation = () => {
+const Simulation = ({ getResults }) => {
   let [DDDOrigin, setDDDOrigin] = useState(0);
   let [plan, setPlan] = useState(0);
   let [DDDDestiny, setDDDDestiny] = useState(0);
@@ -14,9 +16,12 @@ const Simulation = () => {
 
   const submitCalc = e => {
     e.preventDefault();
-    console.log(
-      `Origin: ${DDDOrigin}, Destiny: ${DDDDestiny}, plan: ${plan}, call: ${callDuration} `
-    );
+    getResults({
+      origin: DDDOrigin,
+      destiny: DDDDestiny,
+      duration: callDuration,
+      plan
+    });
   };
   return (
     <div className="simulation" data-testid="simulation">
@@ -40,3 +45,7 @@ const Simulation = () => {
 };
 
 export default Simulation;
+
+Simulation.propTypes = {
+  getResults: PropTypes.func
+};
