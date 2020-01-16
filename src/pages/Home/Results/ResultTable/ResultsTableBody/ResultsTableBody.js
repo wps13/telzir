@@ -26,6 +26,5 @@ ResultsTableBody.propTypes = {
   destinyDDD: PropType.number.isRequired,
   callDuration: PropType.number.isRequired,
   costWithPlan: PropType.string.isRequired,
-  costWithoutPlan: PropType.string.isRequired,
-  planValue: PropType.number.isRequired
+  costWithoutPlan: PropType.string.isRequired
 };
