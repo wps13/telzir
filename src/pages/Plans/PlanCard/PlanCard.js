@@ -2,6 +2,7 @@ import React from "react";
 import PropType from "prop-types";
 
 import "./PlanCard.scss";
+import { Link } from "react-router-dom";
 
 const PlanCard = ({ planValue, clickPlan }) => {
   return (
@@ -11,7 +12,10 @@ const PlanCard = ({ planValue, clickPlan }) => {
         Esse plano dá direito a {planValue} minutos de ligações para qualquer
         DDD. Os minutos excedentes custarão 10% do valor cobrado normalmente.
       </p>
-      <button data-testid="plan_card__simulation">Simular custo</button>
+      <Link to="/">
+        <button data-testid="plan_card__simulation">Simular custo</button>
+      </Link>
+
       <button
         type="button"
         value={planValue}
