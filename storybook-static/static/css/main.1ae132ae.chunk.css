@@ -1,0 +1,26 @@
+form{display:flex;flex-direction:column;max-width:600px}form input{margin-bottom:20px}form button{margin-top:20px;max-width:150px;padding:5px 10px;border-radius:5px;border:none;background-color:#ff4d4d;color:#fff}form button:hover{background-color:#f7baca;cursor:pointer}
+
+.contact{margin:0 auto;width:30%;min-width:350px}
+
+header{display:flex;justify-content:space-between;flex-wrap:wrap;background-color:#eb4343;padding:10px 20px;color:#fff}
+
+.navbar{width:50%;max-width:300px}.navbar__list{display:flex;justify-content:space-between}.navbar__list li{list-style:none}.navbar__list a{text-decoration:none}
+
+.plan_card{background-color:#fe9292;border-radius:5px;max-width:300px;padding:10px 20px;min-height:200px;text-align:center}.plan_card *{margin-bottom:10%}.plan_card button{padding:5px 10px;border-radius:5px;border:none}.plan_card button:first-of-type{margin-right:10px}.plan_card button:nth-of-type(2){background-color:#ff4d4d;color:#fff}.plan_card button:nth-of-type(2):hover{background-color:#f7baca;cursor:pointer}.plan_card button:hover{cursor:pointer}
+
+.plans{margin:1rem}.plans__cards{display:flex;justify-content:space-between}
+
+table{border:1px solid #000;padding:0;border-collapse:collapse;border-spacing:0;margin:20px 0}table td,table th{border:1px solid #000;padding:5px;text-align:center}
+
+label{margin-right:10px}select{margin-right:10%}
+
+.simulation{display:flex;flex-direction:column;align-items:center}.form_simulation>div{margin-bottom:2%}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}input[type="number"]{-moz-appearance:textfield;margin:0 5px}
+
+.plans p{display:inline}
+
+.simulation__ddds{display:flex}
+
+
+/*# sourceMappingURL=main.1ae132ae.chunk.css.map*/
