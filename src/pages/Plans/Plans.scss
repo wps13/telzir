@@ -1,5 +1,6 @@
 .plans {
-  margin: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
   &__cards {
     display: flex;
     justify-content: space-between;
