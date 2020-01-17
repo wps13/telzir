@@ -8,7 +8,7 @@ class MinutePrice {
     const result = this.prices.find(
       price => price.origin === this.origin && price.destiny === this.destiny
     );
-    return result.price;
+    return typeof result !== "undefined" ? result : 0;
   }
 }
 
