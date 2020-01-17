@@ -9,9 +9,9 @@ import PhonePlans from "./PhonePlans/PhonePlans";
 import DDDS from "./DDDS/DDDS";
 
 const Simulation = ({ getResults }) => {
-  let [DDDOrigin, setDDDOrigin] = useState(0);
+  let [DDDOrigin, setDDDOrigin] = useState(11);
   let [plan, setPlan] = useState(0);
-  let [DDDDestiny, setDDDDestiny] = useState(0);
+  let [DDDDestiny, setDDDDestiny] = useState(11);
   let [callDuration, setCallDuration] = useState(0);
 
   const submitCalc = e => {
