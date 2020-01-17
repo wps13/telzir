@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 
 import "./DDDS.scss";
 
-import InputNumber from "../InputNumber/InputNumber";
+import SelectDDD from "./SelectDDD/SelectDDD";
 
 const DDDS = ({ setDestiny, setOrigin }) => {
   return (
     <div className="simulation__ddds" data-testid="ddds">
-      <InputNumber label="DDD de Origem" change={setOrigin} />
-      <InputNumber label="DDD de Destino" change={setDestiny} />
+      <SelectDDD labelText="DDD de Origem" change={setOrigin} />
+      <SelectDDD labelText="DDD de Destino" change={setDestiny} />
     </div>
   );
 };
