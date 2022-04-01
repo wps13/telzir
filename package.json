@@ -1,6 +1,6 @@
 {
   "name": "fale-mais",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "node-sass": "^7.0.1",
@@ -11,8 +11,8 @@
     "react-scripts": "^5.0.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
-    "build": "webpack",
+    "start": "webpack-dev-server --open --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
-    "@babel/preset-env": "^7.16.1",
+    "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-links": "^6.4.19",
@@ -50,6 +50,9 @@
     "css-loader": "^6.7.1",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
+    "mini-css-extract-plugin": "^2.6.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.70.0",

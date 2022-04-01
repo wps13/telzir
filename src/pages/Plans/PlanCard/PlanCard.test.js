@@ -1,12 +1,12 @@
 import React from "react";
-
+import { MemoryRouter } from 'react-router-dom';
 import { render, cleanup } from "@testing-library/react";
 
 import PlanCard from "./PlanCard";
 
 const renderComponent = () => {
   const { getByText, getByTestId } = render(
-    <PlanCard planValue={30} clickPlan={console.log} />
+    <PlanCard planValue={30} clickPlan={console.log} />, {wrapper: MemoryRouter}
   );
   return { getByTestId, getByText };
 };
