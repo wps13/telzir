@@ -1,22 +1,25 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 
-import "./DDDS.scss";
+import "./DDDS.scss"
 
-import SelectDDD from "./SelectDDD/SelectDDD";
+import SelectDDD from "./SelectDDD/SelectDDD"
 
-const DDDS = ({ setDestiny, setOrigin }) => {
+const DDDS = ({ setData }) => {
+  const handleOriginChanged = (value) => setData(value, "origin")
+
+  const handleDestinyChanged = (value) => setData(value, "destiny")
+
   return (
     <div className="simulation__ddds" data-testid="ddds">
-      <SelectDDD labelText="DDD de Origem" change={setOrigin} />
-      <SelectDDD labelText="DDD de Destino" change={setDestiny} />
+      <SelectDDD labelText="DDD de Origem" change={handleOriginChanged} />
+      <SelectDDD labelText="DDD de Destino" change={handleDestinyChanged} />
     </div>
-  );
-};
+  )
+}
 
-export default DDDS;
+export default DDDS
 
 DDDS.propTypes = {
-  setDestiny: PropTypes.func.isRequired,
-  setOrigin: PropTypes.func.isRequired
-};
+  setData: PropTypes.func.isRequired,
+}
