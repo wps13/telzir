@@ -5,7 +5,7 @@ import "./PhonePlanItem.scss"
 
 const PhonePlanItem = ({ labelText, value, nameText, change, checked }) => {
   return (
-    <div>
+    <div className="phone_plan_item__container">
       <input
         type="radio"
         name={nameText}

@@ -1,7 +1,9 @@
-import React from "react";
-import PropType from "prop-types";
+import React from "react"
+import PropType from "prop-types"
 
-import ResultTable from "./ResultTable/ResultTable";
+import ResultTable from "./ResultTable/ResultTable"
+
+import Button from "../../../components/Button/Button"
 
 const Results = ({
   originDDD,
@@ -10,7 +12,7 @@ const Results = ({
   costWithPlan,
   costWithoutPlan,
   planValue,
-  onClickedSimulateAgain
+  onClickedSimulateAgain,
 }) => {
   return (
     <div>
@@ -23,12 +25,12 @@ const Results = ({
         costWithoutPlan={costWithoutPlan}
         planValue={planValue}
       />
-      <button onClick={onClickedSimulateAgain}>Simular novamente</button>
+      <Button title="Simular novamente" onClick={onClickedSimulateAgain} />
     </div>
-  );
-};
+  )
+}
 
-export default Results;
+export default Results
 
 ResultTable.propTypes = {
   originDDD: PropType.number.isRequired,
@@ -37,5 +39,5 @@ ResultTable.propTypes = {
   costWithPlan: PropType.string.isRequired,
   costWithoutPlan: PropType.string.isRequired,
   planValue: PropType.number.isRequired,
-  onClickedSimulateAgain: PropType.func
-};
+  onClickedSimulateAgain: PropType.func,
+}

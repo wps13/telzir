@@ -8,6 +8,8 @@ import InputNumber from "./InputNumber/InputNumber"
 import PhonePlans from "./PhonePlans/PhonePlans"
 import DDDS from "./DDDS/DDDS"
 
+import Button from "../../../components/Button/Button"
+
 const Simulation = ({ getResults }) => {
   let [simulationData, setSimulationData] = useState({
     origin: 11,
@@ -41,9 +43,11 @@ const Simulation = ({ getResults }) => {
           label="Tempo da Ligação (em minutos)"
           change={handleDataChanged}
         />
-        <button type="submit" className="form_simulation__submit_button">
-          Calcular
-        </button>
+        <Button
+          title="Calcular"
+          type="submit"
+          className="form_simulation__submit_button"
+        />
       </form>
     </div>
   )

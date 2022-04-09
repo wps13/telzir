@@ -1,10 +1,10 @@
-import React from "react";
-import FormItem from "./FormItem/FormItem";
+import React from "react"
+import FormItem from "./FormItem/FormItem"
 
-import "./Form.scss";
+import "./Form.scss"
 
 const Form = () => (
-  <form data-testid="form">
+  <form data-testid="form" className="contact__form">
     <FormItem labelText="Nome" type="text" />
     <FormItem labelText="Email" type="email" />
     <FormItem labelText="Mensagem" type="text" />
@@ -12,5 +12,5 @@ const Form = () => (
       Enviar
     </button>
   </form>
-);
-export default Form;
+)
+export default Form
