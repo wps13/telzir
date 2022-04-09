@@ -1,20 +1,18 @@
-import React from "react";
-import { render, cleanup } from "@testing-library/react";
+import React from "react"
+import { render, cleanup } from "@testing-library/react"
 
-import DDDS from "./DDDS";
+import DDDS from "./DDDS"
 
 const renderElem = () => {
-  const { getByTestId } = render(
-    <DDDS setDestiny={console.log} setOrigin={console.log} />
-  );
-  return { getByTestId };
-};
+  const { getByTestId } = render(<DDDS setData={jest.fn} />)
+  return { getByTestId }
+}
 
 describe("DDDS", () => {
-  afterEach(cleanup);
+  afterEach(cleanup)
   it("should render children correctly", () => {
-    const { getByTestId } = renderElem();
-    const ddds = getByTestId("ddds");
-    expect(ddds.children.length).toBeTruthy();
-  });
-});
+    const { getByTestId } = renderElem()
+    const ddds = getByTestId("ddds")
+    expect(ddds.children.length).toBeTruthy()
+  })
+})

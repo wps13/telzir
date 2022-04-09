@@ -1,17 +1,12 @@
-import React from "react";
+import React from "react"
 
-import { render, cleanup } from "@testing-library/react";
-import Simulation from "./Simulation";
-
-const renderElem = () => {
-  const { getByTestId } = render(<Simulation />);
-  return { getByTestId };
-};
+import { render } from "@testing-library/react"
+import Simulation from "./Simulation"
 
 describe("Simulation", () => {
   it("should render correctly", () => {
-    const { getByTestId } = renderElem();
-    const simulation = getByTestId("simulation");
-    expect(simulation.children.length).toBeTruthy();
-  });
-});
+    const { getByTestId } = render(<Simulation getResults={jest.fn} />)
+    const simulation = getByTestId("simulation")
+    expect(simulation.children.length).toBe(2)
+  })
+})

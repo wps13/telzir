@@ -1,28 +1,32 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
 
-import "./Simulation.scss";
+import "./Simulation.scss"
 
-import InputNumber from "./InputNumber/InputNumber";
-import PhonePlans from "./PhonePlans/PhonePlans";
-import DDDS from "./DDDS/DDDS";
+import InputNumber from "./InputNumber/InputNumber"
+import PhonePlans from "./PhonePlans/PhonePlans"
+import DDDS from "./DDDS/DDDS"
+
+import Button from "../../../components/Button/Button"
 
 const Simulation = ({ getResults }) => {
-  let [DDDOrigin, setDDDOrigin] = useState(11);
-  let [plan, setPlan] = useState(0);
-  let [DDDDestiny, setDDDDestiny] = useState(11);
-  let [callDuration, setCallDuration] = useState(0);
+  let [simulationData, setSimulationData] = useState({
+    origin: 11,
+    plan: 0,
+    destiny: 11,
+    duration: 0,
+  })
 
-  const submitCalc = e => {
-    e.preventDefault();
-    getResults({
-      origin: DDDOrigin,
-      destiny: DDDDestiny,
-      duration: callDuration,
-      plan
-    });
-  };
+  const submitCalc = (e) => {
+    e.preventDefault()
+    getResults(simulationData)
+  }
+
+  const handleDataChanged = (value, key) => {
+    setSimulationData((previousData) => ({ ...previousData, [key]: value }))
+  }
+
   return (
     <div className="simulation" data-testid="simulation">
       <p>
@@ -30,22 +34,27 @@ const Simulation = ({ getResults }) => {
         minutos, e os DDD de origem e destino
       </p>
       <form onSubmit={submitCalc} className="form_simulation">
-        <DDDS setOrigin={setDDDOrigin} setDestiny={setDDDDestiny} />
-        <PhonePlans setPlan={setPlan} />
+        <DDDS setData={handleDataChanged} />
+        <PhonePlans
+          setPlan={handleDataChanged}
+          selected={simulationData?.plan}
+        />
         <InputNumber
           label="Tempo da Ligação (em minutos)"
-          change={setCallDuration}
+          change={handleDataChanged}
         />
-        <button type="submit" className="form_simulation__submit_button">
-          Calcular
-        </button>
+        <Button
+          title="Calcular"
+          type="submit"
+          className="form_simulation__submit_button"
+        />
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Simulation;
+export default Simulation
 
 Simulation.propTypes = {
-  getResults: PropTypes.func
-};
+  getResults: PropTypes.func,
+}
